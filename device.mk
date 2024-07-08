@@ -85,6 +85,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    Aperture \
     android.hardware.camera.common@1.0.vendor \
     android.hardware.camera.device@3.2.vendor \
     android.hardware.camera.device@1.0.vendor \
@@ -99,12 +100,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libcamera_metadata_shim
-
-PRODUCT_PACKAGES += \
-    CameraGo
-
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/permissions/privapp-permissions-camera-go.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-camera-go.xml
 
 # Doze
 PRODUCT_PACKAGES += \
