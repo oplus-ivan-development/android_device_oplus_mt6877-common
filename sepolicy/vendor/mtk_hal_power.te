@@ -3,3 +3,6 @@ allow mtk_hal_power vendor_proc_display:file rw_file_perms;
 binder_call(mtk_hal_power, hal_power_default)
 allow mtk_hal_power latency_device:chr_file { write };
 allow mtk_hal_power latency_device:chr_file { open };
+
+allow mtk_hal_power sysfs_touchgesture:dir r_dir_perms;
+allow mtk_hal_power sysfs_touchgesture:file rw_file_perms;

@@ -72,7 +72,10 @@ BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
 # VINTF
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/manifest.xml
 DEVICE_MATRIX_FILE += $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/framework_compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE :=  \
+    $(DEVICE_PATH)/configs/vintf/framework_compatibility_matrix.xml \
+    vendor/lmodroid/config/device_framework_matrix.xml
+
 ODM_MANIFEST_SKUS += nfc
 ODM_MANIFEST_NFC_FILES := $(DEVICE_PATH)/configs/vintf/manifest_nfc.xml
 ODM_MANIFEST_FILES := $(DEVICE_PATH)/configs/vintf/manifest_odm.xml
@@ -193,20 +196,6 @@ SOONG_CONFIG_OPLUS_LINEAGE_TOUCH_HAL_INCLUDE_DIR := $(DEVICE_PATH)/touch/include
 TARGET_VIBRATOR_SUPPORTS_EFFECTS := true
 
 # Wi-Fi
-BOARD_WLAN_DEVICE := MediaTek
-WPA_SUPPLICANT_VERSION := VER_0_8_X
-BOARD_WPA_SUPPLICANT_DRIVER := NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_mt66xx
-BOARD_HOSTAPD_DRIVER := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_mt66xx
-WIFI_DRIVER_FW_PATH_PARAM := /dev/wmtWifi
-WIFI_DRIVER_FW_PATH_STA:= STA
-WIFI_DRIVER_FW_PATH_AP := AP
-WIFI_DRIVER_FW_PATH_P2P := P2P
-WIFI_DRIVER_STATE_CTRL_PARAM := /dev/wmtWifi
-WIFI_DRIVER_STATE_ON := 1
-WIFI_DRIVER_STATE_OFF := 0
-WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
 # Inherit from the proprietary version

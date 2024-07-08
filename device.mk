@@ -287,6 +287,7 @@ PRODUCT_PACKAGES += \
     WifiOverlay \
     TetheringConfigOverlay \
     CarrierConfigOverlay \
+    FrameworksResOverlayivan \
     SettingsProviderOverlay
 
 # Permissions
@@ -424,6 +425,12 @@ PRODUCT_PACKAGES += \
     RcsService \
     PresencePolling
 
+# Screen Density
+TARGET_SCREEN_HEIGHT := 2400
+TARGET_SCREEN_WIDTH := 1080
+PRODUCT_AAPT_CONFIG := xxxhdpi
+PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH) \
@@ -453,29 +460,14 @@ PRODUCT_PACKAGES += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0.vendor \
-    android.hardware.wifi@1.1.vendor \
-    android.hardware.wifi@1.2.vendor \
-    android.hardware.wifi@1.3.vendor \
-    android.hardware.wifi@1.4.vendor \
     android.hardware.wifi@1.5.vendor \
-    android.hardware.wifi.hostapd@1.0.vendor \
-    android.hardware.wifi.hostapd@1.1.vendor \
-    android.hardware.wifi.hostapd@1.2.vendor \
     android.hardware.wifi.hostapd@1.3.vendor \
-    android.hardware.wifi.supplicant@1.0.vendor \
-    android.hardware.wifi.supplicant@1.1.vendor \
-    android.hardware.wifi.supplicant@1.2.vendor \
-    android.hardware.wifi.supplicant@1.3.vendor \
     android.hardware.wifi.supplicant@1.4.vendor \
     android.hardware.tetheroffload.config@1.0.vendor \
-    android.hardware.tetheroffload.control@1.0.vendor \
-    android.hardware.tetheroffload.control@1.1.vendor \
-    hostapd \
-    hostapd_cli 
+    android.hardware.tetheroffload.control@1.1.vendor
 
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service-lazy.mt6877
+    android.hardware.wifi@1.0-service-lazy.ivan
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
