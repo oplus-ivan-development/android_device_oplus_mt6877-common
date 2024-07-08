@@ -274,21 +274,19 @@ PRODUCT_PACKAGES += \
     android.hardware.usb.gadget@1.1.vendor
 
 # Overlays
-PRODUCT_ENFORCE_RRO_TARGETS := *
+$(call inherit-product, hardware/oplus/overlay/generic/generic.mk)
+PRODUCT_PACKAGES += \
+    FrameworkResOverlayPlatform \
+    SystemUIOverlayPlatform \
+    SettingsOverlayPlatform \
+    TelephonyOverlay \
+    CarrierConfigOverlay
 
 DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay \
-    $(DEVICE_PATH)/overlay-aosp
+    $(LOCAL_PATH)/overlay-aosp
 
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(DEVICE_PATH)/overlay-aosp
-
-PRODUCT_PACKAGES += \
-    WifiOverlay \
-    TetheringConfigOverlay \
-    CarrierConfigOverlay \
-    FrameworksResOverlayivan \
-    SettingsProviderOverlay
+# Enforce RRO targets
+PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -392,6 +390,15 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.mtk.rc \
     ueventd.oplus.rc \
+
+# Rro
+PRODUCT_PACKAGES += \
+    TetheringConfigOverlay \
+    WifiOverlay \
+    DozeOverlaySystem \
+    DozeOverlaySystemUI \
+    OplusDozeOverlay \
+    OPlusSettingsResTarget
 
 # Fastboot
 PRODUCT_PACKAGES += \
