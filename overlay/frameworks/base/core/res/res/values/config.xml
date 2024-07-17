@@ -303,14 +303,6 @@
     <!-- Whether device supports double tap to wake -->
     <bool name="config_supportDoubleTapWake">true</bool>
 
-    <!-- Smart charging -->
-    <bool name="config_smartChargingAvailable">true</bool>
-
-    <!-- Smart charging -->
-    <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/mmi_charging_enable</string>
-    <string name="config_SmartChargingSuspendValue" translatable="false">1</string>
-    <string name="config_SmartChargingResumeValue" translatable="false">0</string>
-
      <!-- The properties of a UDFPS sensor in pixels, in the order listed below: -->
      <integer-array name="config_udfps_sensor_props" translatable="false" >
       <!--
@@ -337,9 +329,6 @@
 
     <!-- Udfps vendor code -->
     <integer name="config_udfps_vendor_code">0</integer>
-
-    <!-- Whether device has SuperDart charging support -->
-    <bool name="config_hasSuperDartCharger">true</bool>
 
     <!-- The default journal mode to use use when Write-Ahead Logging is not active.
          Choices are: OFF, DELETE, TRUNCATE, PERSIST and MEMORY.
@@ -388,5 +377,14 @@
          Note: This should be only enabled on devices with high confidence on power measurement.
     -->
     <bool name="config_bg_current_drain_auto_restrict_abusive_apps">true</bool>
+
+    <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
+    <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/oplus_chg/battery/voocchg_ing</string>
+
+    <!-- Expected value from fast charging status file  -->
+    <string name="config_oemFastChargerStatusValue" translatable="false">1</string>
+
+    <!-- Whether device has Dash charging support -->
+    <bool name="config_hasDashCharger">true</bool>
 
 </resources>
