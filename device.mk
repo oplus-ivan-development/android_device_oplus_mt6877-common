@@ -15,6 +15,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Dalvik VM Configuration
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
+# Dolby
+$(call inherit-product, hardware/dolby/dolby.mk)
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 

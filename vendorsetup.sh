@@ -7,6 +7,7 @@ if [ -n "${CLEAN_DT_REPOS}" ]; then
         rm -rf device/oplus
         rm -rf hardware/lineage/compat
         rm -rf hardware/mediatek
+        rm -rf hardware/dolby
         unset CLEAN_DT_REPOS
     fi
 fi
@@ -31,5 +32,8 @@ if ! [ -a $CLANG17 ]; then git clone --depth=1 https://github.com/oneplus-mediat
 fi
 WLAN=hardware/mediatek/wlan/Android.mk
 if ! [ -a $WLAN ]; then git clone --depth=1 https://github.com/nishant6342/android_hardware_mediatek_wlan hardware/mediatek/wlan
+fi
+Dolby=hardware/dolby/dolby.mk
+if ! [ -a $Dolby ]; then git clone https://github.com/Notganesh/hardware_dolby.git hardware/dolby
 fi
 echo end cloning
