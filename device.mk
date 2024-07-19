@@ -210,6 +210,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-service.ivan
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.1-service-ivan
+
 # Media
 PRODUCT_PACKAGES += \
     libcodec2_hidl@1.1.vendor \
