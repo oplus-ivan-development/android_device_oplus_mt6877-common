@@ -233,11 +233,18 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/seccomp/mediaswcodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaswcodec.policy
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay
+PRODUCT_PACKAGES += \
+    FrameworkResOverlayPlatform \
+    SystemUIOverlayPlatform \
+    SettingsOverlayPlatform \
+    TelephonyOverlay \
+    CarrierConfigOverlay
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
+
+# Enforce RRO targets
+PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Neural Networks
 PRODUCT_PACKAGES += \
@@ -372,11 +379,6 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.mtk.rc \
     ueventd.oplus.rc \
-
-# RRO-Overlays
-PRODUCT_PACKAGES += \
-    TetheringConfigOverlay \
-    WifiOverlay
 
 # Fastboot
 PRODUCT_PACKAGES += \
