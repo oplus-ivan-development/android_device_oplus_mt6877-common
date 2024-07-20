@@ -97,7 +97,7 @@
         <DefaultValue>0</DefaultValue>
     </CMD>
     <CMD name="PERF_RES_SCHED_BOOST" id="0x01410000">
-        <Entry path="/sys/devices/system/cpu/sched/sched_boost"></Entry>
+        <Entry path="/proc/perfmgr/boost_ctrl/eas_ctrl/sched_boost"></Entry>
         <Compare>more</Compare>
         <MaxValue>2</MaxValue>
         <MinValue>0</MinValue>
@@ -294,8 +294,8 @@
         <Entry path="/proc/perfmgr/tchbst/user/usrtch"></Entry>
         <Compare>less</Compare>
         <MaxValue>15</MaxValue>
-        <MinValue>-2</MinValue>
-        <DefaultValue>7</DefaultValue>
+        <MinValue>0</MinValue>
+        <DefaultValue>2</DefaultValue>
         <Prefix>touch_opp^</Prefix>
     </CMD>
     <CMD name="PERF_RES_POWERHAL_TOUCH_BOOST_CLUSTER_0_OPP" id="0x03408800">
@@ -319,7 +319,7 @@
         <Compare>more</Compare>
         <MaxValue>2000000000</MaxValue>
         <MinValue>10000000</MinValue>
-        <DefaultValue>150000000</DefaultValue>
+        <DefaultValue>200000000</DefaultValue>
         <Prefix>duration^</Prefix>
     </CMD>
     <CMD name="PERF_RES_POWERHAL_TOUCH_BOOST_ACTIVE_TIME" id="0x03408200">
@@ -335,7 +335,7 @@
         <Compare>more</Compare>
         <MaxValue>100</MaxValue>
         <MinValue>0</MinValue>
-        <DefaultValue>0</DefaultValue>
+        <DefaultValue>80</DefaultValue>
         <Prefix>eas_boost^</Prefix>
     </CMD>
     <CMD name="PERF_RES_POWERHAL_TOUCH_BOOST_TIME_TO_LAST_TOUCH" id="0x03408400">
@@ -372,20 +372,6 @@
         <Compare>more</Compare>
         <MaxValue>100</MaxValue>
         <MinValue>0</MinValue>
-    </CMD>
-    <CMD name="PERF_RES_FPS_FBT_RESCUE_PERCENT_90" id="0x0200c200">
-        <Entry path="/sys/module/fbt_cpu/parameters/rescue_percent_90"></Entry>
-        <Compare>more</Compare>
-        <MaxValue>100</MaxValue>
-        <MinValue>0</MinValue>
-        <DefaultValue>33</DefaultValue>
-    </CMD>
-    <CMD name="PERF_RES_FPS_FBT_RESCUE_PERCENT_120" id="0x0200c300">
-        <Entry path="/sys/module/fbt_cpu/parameters/rescue_percent_120"></Entry>
-        <Compare>more</Compare>
-        <MaxValue>100</MaxValue>
-        <MinValue>0</MinValue>
-        <DefaultValue>33</DefaultValue>
     </CMD>
     <CMD name="PERF_RES_GPU_GED_TIMER_BASE_DVFS_MARGIN" id="0x00c0c200">
         <Entry path="/sys/kernel/ged/hal/timer_base_dvfs_margin"></Entry>
@@ -622,27 +608,6 @@
         <MinValue>0</MinValue>
         <DefaultValue>-1</DefaultValue>
     </CMD>
-    <CMD name="PERF_RES_POWER_SYSLIMITER_60" id="0x01c40000">
-        <Entry path="/proc/perfmgr/syslimiter/syslimiter_fps_60"></Entry>
-        <Compare>less</Compare>
-        <MaxValue>3000000</MaxValue>
-        <MinValue>0</MinValue>
-        <DefaultValue>-1</DefaultValue>
-    </CMD>
-    <CMD name="PERF_RES_POWER_SYSLIMITER_90" id="0x01c40100">
-        <Entry path="/proc/perfmgr/syslimiter/syslimiter_fps_90"></Entry>
-        <Compare>less</Compare>
-        <MaxValue>3000000</MaxValue>
-        <MinValue>0</MinValue>
-        <DefaultValue>-1</DefaultValue>
-    </CMD>
-    <CMD name="PERF_RES_POWER_SYSLIMITER_120" id="0x01c40200">
-        <Entry path="/proc/perfmgr/syslimiter/syslimiter_fps_120"></Entry>
-        <Compare>less</Compare>
-        <MaxValue>3000000</MaxValue>
-        <MinValue>0</MinValue>
-        <DefaultValue>-1</DefaultValue>
-    </CMD>
     <CMD name="PERF_RES_POWER_SYSLIMITER_DISABLE" id="0x01c44000">
         <Entry path="/proc/perfmgr/syslimiter/syslimiter_force_disable"></Entry>
         <Compare>less</Compare>
@@ -675,7 +640,7 @@
         <Compare>more</Compare>
         <MaxValue>2</MaxValue>
         <MinValue>0</MinValue>
-        <DefaultValue>0</DefaultValue>
+        <DefaultValue>2</DefaultValue>
     </CMD>
     <CMD name="PERF_RES_FPS_FBT_QR_ENABLE" id="0x02068000">
         <Entry path="/sys/module/fbt_cpu/parameters/qr_enable"></Entry>
@@ -854,5 +819,12 @@
         <Compare>more</Compare>
         <MaxValue>65535</MaxValue>
         <MinValue>0</MinValue>
+    </CMD>
+    <CMD name="PERF_RES_SCHED_CPU_EAS_INFO" id="0x01418700">
+        <Entry path="/sys/devices/system/cpu/eas/info"></Entry>
+        <Compare>more</Compare>
+        <MaxValue>1</MaxValue>
+        <MinValue>0</MinValue>
+        <DefaultValue>1</DefaultValue>
     </CMD>
 </CONTABLE>
