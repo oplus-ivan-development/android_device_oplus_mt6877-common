@@ -174,6 +174,9 @@ TARGET_RECOVERY_UI_MARGIN_HEIGHT := 90
 # Ril
 ENABLE_VENDOR_RIL_SERVICE := true
 
+# Reserve space for gapps install
+-include vendor/lineage/config/BoardConfigReservedSize.mk
+
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 
