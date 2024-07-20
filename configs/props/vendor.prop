@@ -18,7 +18,6 @@ ro.vendor.mtk_audio_tuning_tool_ver=V2.2
 ro.vendor.mtk_audio_ape_support=1
 
 # Bluetooth
-ro.vendor.bt.platform=6877
 persist.vendor.mtk_ct_volte_support=3
 vendor.bluetooth.ldac.abr=true
 ro.vendor.bt.platform=connac1x

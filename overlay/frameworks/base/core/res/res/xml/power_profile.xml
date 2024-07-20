@@ -76,6 +76,7 @@
 
   <!-- A list of heterogeneous CPU clusters, where the value for each cluster represents the
        number of CPU cores for that cluster.
+
        Ex:
        <array name="cpu.clusters.cores">
          <value>4</value> // cluster 0 has cpu0, cpu1, cpu2, cpu3
@@ -89,6 +90,7 @@
 
     <!-- Different CPU speeds for cluster 0 as reported in
        /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state.
+
        There must be one of these for each cluster, labeled:
        cpu.core_speeds.cluster0, cpu.core_speeds.cluster1, etc... -->
   <array name="cpu.core_speeds.cluster0">
@@ -223,7 +225,7 @@
   </array>
 
   <!-- This is the battery capacity in mAh (measured at nominal voltage) -->
-  <item name="battery.capacity">4500</item>
+  <item name="battery.capacity">5000</item>
 
   <!-- Wifi related values. -->
   <!-- Idle Receive current for wifi radio in mA. 0 by default-->

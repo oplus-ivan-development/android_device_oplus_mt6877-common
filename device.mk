@@ -15,9 +15,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Dalvik VM Configuration
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
-# Dolby
-$(call inherit-product, hardware/dolby/dolby.mk)
-
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
@@ -52,9 +49,6 @@ PRODUCT_PACKAGES += \
     libhapticgenerator \
     audio.r_submix.default \
     audio.usb.default \
-
-PRODUCT_PACKAGES += \
-    MtkInCallService
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/audio/audio_device.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_device.xml \
@@ -102,10 +96,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libcamera_metadata_shim
-
-# Doze
-PRODUCT_PACKAGES += \
-    OplusDoze
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -242,6 +232,13 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/seccomp/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy \
     $(DEVICE_PATH)/configs/seccomp/mediaswcodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaswcodec.policy
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(DEVICE_PATH)/overlay
+
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage
+
 # Neural Networks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.0.vendor \
@@ -269,20 +266,6 @@ PRODUCT_PACKAGES += \
     android.hardware.usb@1.3.vendor \
     android.hardware.usb.gadget@1.0.vendor \
     android.hardware.usb.gadget@1.1.vendor
-
-# Overlays
-PRODUCT_PACKAGES += \
-    FrameworkResOverlayPlatform \
-    SystemUIOverlayPlatform \
-    SettingsOverlayPlatform \
-    TelephonyOverlay \
-    CarrierConfigOverlay
-
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-aosp
-
-# Enforce RRO targets
-PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -390,14 +373,10 @@ PRODUCT_PACKAGES += \
     ueventd.mtk.rc \
     ueventd.oplus.rc \
 
-# Rro
+# RRO-Overlays
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
-    WifiOverlay \
-    DozeOverlaySystem \
-    DozeOverlaySystemUI \
-    OplusDozeOverlay \
-    OPlusSettingsResTarget
+    WifiOverlay
 
 # Fastboot
 PRODUCT_PACKAGES += \
@@ -439,7 +418,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(DEVICE_PATH) \
     $(DEVICE_PATH) \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
