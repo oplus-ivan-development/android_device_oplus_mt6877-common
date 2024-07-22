@@ -319,8 +319,6 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml
 
 # Power
-$(call inherit-product, $(LOCAL_PATH)/power-libperfmgr/power-libperfmgr.mk)
-
 PRODUCT_PACKAGES += \
     android.hardware.power-service-mediatek \
     android.hardware.power-V2-ndk_platform.vendor \
@@ -422,10 +420,10 @@ PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH) \
+    $(DEVICE_PATH) \
     hardware/mediatek \
-    hardware/oplus \
-    hardware/mediatek/libmtkperf_client
+    hardware/mediatek/libmtkperf_client \
+    hardware/oplus
 
 # Thermal
 PRODUCT_PACKAGES += \
