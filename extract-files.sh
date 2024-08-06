@@ -19,7 +19,7 @@
 set -e
 
 export DEVICE=ivan
-export VENDOR=oneplus
+export VENDOR=oplus
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -112,5 +112,9 @@ setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
 
 extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
         "${KANG}" --section "${SECTION}"
+
+if [ -z "${SECTION}" ]; then
+    extract_firmware "${MY_DIR}/proprietary-firmware.txt" "${SRC}"
+fi
 
 bash "${MY_DIR}/setup-makefiles.sh"

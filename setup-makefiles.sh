@@ -19,9 +19,9 @@
 set -e
 
 export DEVICE=ivan
-export VENDOR=oneplus
+export VENDOR=oplus
 
-INITIAL_COPYRIGHT_YEAR=2021
+INITIAL_COPYRIGHT_YEAR=2024
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -44,6 +44,9 @@ write_headers "mt6877"
 
 # The standard blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
+
+# Append the calls to firmware images
+append_firmware_calls_to_makefiles "${MY_DIR}/proprietary-firmware.txt"
 
 # Finish
 write_footers
