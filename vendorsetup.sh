@@ -5,6 +5,7 @@ if [ -n "${CLEAN_DT_REPOS}" ]; then
         rm -rf kernel/oneplus
         rm -rf device/mediatek/sepolicy_vndr
         rm -rf device/oplus
+        rm -rf hardware/oplus
         rm -rf hardware/lineage/compat
         rm -rf hardware/mediatek
         unset CLEAN_DT_REPOS
@@ -12,7 +13,7 @@ if [ -n "${CLEAN_DT_REPOS}" ]; then
 fi
 echo start cloning repos
 VT=vendor/oplus/ivan/ivan-vendor.mk
-if ! [ -a $VT ]; then git clone https://github.com/Notganesh/vendor_oneplus_ivan.git -b lineage-20 vendor/oplus/ivan
+if ! [ -a $VT ]; then git clone https://gitlab.com/notganesh/vendor_oneplus_ivan.git -b lineage-20 vendor/oplus/ivan
 fi
 KT=kernel/oneplus/ivan/Makefile
 if ! [ -a $KT ]; then git clone https://github.com/Notganesh/kernel_oneplus_ivan.git -b main kernel/oneplus/ivan
@@ -31,5 +32,7 @@ if ! [ -a $CLANG17 ]; then git clone --depth=1 https://github.com/oneplus-mediat
 fi
 WLAN=hardware/mediatek/wlan/Android.mk
 if ! [ -a $WLAN ]; then git clone --depth=1 https://github.com/nishant6342/android_hardware_mediatek_wlan hardware/mediatek/wlan
+OPLUS=hardware/oplus/Android.bp
+if ! [ -a $OPLUS ]; then git clone --depth=1 git clone https://github.com/crdroidandroid/android_hardware_oplus.git -b 13.0 hardware/oplus
 fi
 echo end cloning
