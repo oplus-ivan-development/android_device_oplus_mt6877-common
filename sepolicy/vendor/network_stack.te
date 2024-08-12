@@ -1,2 +1,0 @@
-allow network_stack proc_net:file r_file_perms;
-allow network_stack fs_bpf:file { read write };

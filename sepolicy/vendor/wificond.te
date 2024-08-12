@@ -1,1 +1,0 @@
-allow wificond init:binder { call };
