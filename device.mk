@@ -236,20 +236,6 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/seccomp/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy \
     $(DEVICE_PATH)/configs/seccomp/mediaswcodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaswcodec.policy
 
-# Overlays
-PRODUCT_PACKAGES += \
-    FrameworkResOverlayPlatform \
-    SystemUIOverlayPlatform \
-    SettingsOverlayPlatform \
-    TelephonyOverlay \
-    CarrierConfigOverlay
-
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
-
-# Enforce RRO targets
-PRODUCT_ENFORCE_RRO_TARGETS := *
-
 # Neural Networks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.0.vendor \
@@ -268,6 +254,21 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/permissions/nfc_features.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_nfc/nfc_features.xml
+
+
+# Overlays
+PRODUCT_PACKAGES += \
+    OPlusCarrierConfigResTarget \
+    OPlusFrameworksResTarget \
+    OPlusSettingsProviderResNordce2 \
+    OPlusSettingsResTarget \
+    OPlusSystemUIResTarget \
+    OPlusTetheringConfigResTarget \
+    OPlusWifiResTarget
+
+PRODUCT_PACKAGES += \
+    LineageSDKResTarget \
+    LineageSettingsProviderResTarget
 
 # USB
 PRODUCT_PACKAGES += \
