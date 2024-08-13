@@ -113,6 +113,7 @@ ro.vendor.smvr.p2batch.fhd=4
 ro.hardware.egl=meow
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 vendor.mtk.hwc.HWC_PLAT_SWITCH_EXTEND_SF_TARGET_TS_FOR_VIDEO=1
+ro.hwui.render_ahead=10
 
 # Display - Dynamic refresh rate
 ro.surface_flinger.set_touch_timer_ms=3000
