@@ -34,6 +34,6 @@ WLAN=hardware/mediatek/wlan/Android.mk
 if ! [ -a $WLAN ]; then git clone --depth=1 https://github.com/nishant6342/android_hardware_mediatek_wlan hardware/mediatek/wlan
 fi
 OPLUS=hardware/oplus/Android.bp
-if ! [ -a $OPLUS ]; then git clone --depth=1 git clone https://github.com/Notganesh/android_hardware_oplus.git -b lineage-21 hardware/oplus
+if ! [ -a $OPLUS ]; then git clone https://github.com/Notganesh/android_hardware_oplus.git -b lineage-21 hardware/oplus
 fi
 echo end cloning

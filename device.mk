@@ -260,7 +260,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     OPlusCarrierConfigResTarget \
     OPlusFrameworksResTarget \
-    OPlusSettingsProviderResNordce2 \
     OPlusSettingsResTarget \
     OPlusSystemUIResTarget \
     OPlusTetheringConfigResTarget \
