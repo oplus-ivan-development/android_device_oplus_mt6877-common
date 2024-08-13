@@ -7,7 +7,7 @@ if [ -n "${CLEAN_DT_REPOS}" ]; then
         rm -rf device/oplus
         rm -rf hardware/oplus
         rm -rf hardware/lineage/compat
-        rm -rf hardware/mediatek
+        rm -rf packages/apps/OnePlusParts
         unset CLEAN_DT_REPOS
     fi
 fi
@@ -24,8 +24,8 @@ fi
 COMPACT=hardware/lineage/compat/Android.bp
 if ! [ -a $COMPACT ]; then git clone --depth=1 https://github.com/LineageOS/android_hardware_lineage_compat -b lineage-20.0 hardware/lineage/compat
 fi
-MTK=hardware/mediatek/Android.bp
-if ! [ -a $MTK ]; then git clone --depth=1 https://github.com/Notganesh/android_hardware_mediatek.git -b lineage-20 hardware/mediatek
+OPLUS=packages/apps/OnePlusParts/Android.mk
+if ! [ -a $OPLUS ]; then git clone https://github.com/Notganesh/packages_apps_OnePlusParts.git -b lineage-20 packages/apps/OnePlusParts
 fi
 CLANG17=prebuilts/clang/host/linux-x86/clang-r383902/bin/clang
 if ! [ -a $CLANG17 ]; then git clone --depth=1 https://github.com/oneplus-mediatek-dev/android_prebuilts_clang_host_linux-x86_clang-6443078.git -b 11.0.1 prebuilts/clang/host/linux-x86/clang-r383902

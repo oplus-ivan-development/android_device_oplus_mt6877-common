@@ -269,6 +269,12 @@ PRODUCT_PACKAGES += \
     LineageSDKResTarget \
     LineageSettingsProviderResTarget
 
+# OnePlusParts
+$(call inherit-product, packages/apps/OnePlusParts/parts.mk)
+
+PRODUCT_COPY_FILES += \
+    packages/apps/OnePlusParts/init/cabc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/cabc.rc
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0.vendor \
