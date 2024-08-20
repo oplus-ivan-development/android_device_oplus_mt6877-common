@@ -258,16 +258,16 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-lineage
+
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
     TetheringResMainlineOverlay \
     TetheringResOverlay \
     WifiResMainlineOverlay \
     WifiResOverlay
-
-PRODUCT_PACKAGES += \
-    LineageSDKResTarget \
-    LineageSettingsProviderResTarget
 
 # OnePlusParts
 $(call inherit-product, packages/apps/OnePlusParts/parts.mk)
