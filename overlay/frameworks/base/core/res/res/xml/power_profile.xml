@@ -41,7 +41,7 @@
   <item name="camera.flashlight">150</item> <!-- Avg. power for camera flash, ~160mA -->
   <item name="camera.avg">550</item> <!-- Avg. power use of camera in standard usecases, ~550mA -->
   <item name="gps.on">45</item> <!-- ~50mA -->
-  
+
   <item name="dsp.audio">16.59</item> <!-- ~10mA -->
   <item name="dsp.video">74.85</item> <!-- ~50mA -->
   <item name="bluetooth.controller.idle">1.7</item>  <!--new add -->
@@ -76,6 +76,7 @@
 
   <!-- A list of heterogeneous CPU clusters, where the value for each cluster represents the
        number of CPU cores for that cluster.
+
        Ex:
        <array name="cpu.clusters.cores">
          <value>4</value> // cluster 0 has cpu0, cpu1, cpu2, cpu3
@@ -89,6 +90,7 @@
 
     <!-- Different CPU speeds for cluster 0 as reported in
        /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state.
+
        There must be one of these for each cluster, labeled:
        cpu.core_speeds.cluster0, cpu.core_speeds.cluster1, etc... -->
   <array name="cpu.core_speeds.cluster0">
