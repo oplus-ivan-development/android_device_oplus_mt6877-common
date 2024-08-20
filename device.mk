@@ -256,6 +256,8 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/permissions/nfc_features.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_nfc/nfc_features.xml
 
 # Overlays
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
     TetheringResMainlineOverlay \
