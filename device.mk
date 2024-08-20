@@ -258,11 +258,10 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
-    OPlusFrameworksResTarget \
-    OPlusSettingsResTarget \
-    OPlusSystemUIResTarget \
-    OPlusTetheringConfigResTarget \
-    OPlusWifiResTarget
+    TetheringResMainlineOverlay \
+    TetheringResOverlay \
+    WifiResMainlineOverlay \
+    WifiResOverlay
 
 PRODUCT_PACKAGES += \
     LineageSDKResTarget \
