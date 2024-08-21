@@ -268,7 +268,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
-    TetheringOverlay \
+    TetheringConfigOverlay \
     WifiOverlay
 
 # OnePlusParts
