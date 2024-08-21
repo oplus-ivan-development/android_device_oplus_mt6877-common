@@ -1,0 +1,9 @@
+set_prop(rild, vendor_mtk_gwsd_capability_prop)
+set_prop(rild, vendor_mtk_telephony_addon_prop)
+set_prop(rild, vendor_mtk_mdrsra_v2_support_prop)
+set_prop(rild, vendor_mtk_xfrm_support_prop)
+set_prop(rild, vendor_mtk_md_prop)
+allow rild default_prop:file { read };
+allow rild default_prop:file { open };
+allow rild default_prop:file { getattr };
+allow rild default_prop:file { map };
