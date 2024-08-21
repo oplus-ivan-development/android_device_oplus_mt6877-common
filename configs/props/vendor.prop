@@ -2,6 +2,9 @@
 ro.vendor.pq.mtk_aal_support=1
 ro.vendor.mtk_aal_support=1
 
+# APK Verity
+ro.apk_verity.mode=2
+
 # ADB
 persist.adb.nonblocking_ffs=0
 
