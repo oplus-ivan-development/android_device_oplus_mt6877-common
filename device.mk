@@ -268,10 +268,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
-    TetheringResMainlineOverlay \
-    TetheringResOverlay \
-    WifiResMainlineOverlay \
-    WifiResOverlay
+    TetheringOverlay \
+    WifiOverlay
 
 # OnePlusParts
 $(call inherit-product, packages/apps/OnePlusParts/parts.mk)
