@@ -1,17 +1,5 @@
 [
   {
-    "repository": "oplus-ossi-development/android_kernel_oplus_mt6893",
-    "target_path": "kernel/oplus/mt6893",
-    "revision": "lineage-21",
-    "remote": "github"
-  },
-  {
-    "repository": "oplus-ossi-development/proprietary_vendor_oplus_mt6893-common",
-    "target_path": "vendor/oplus/mt6893-common",
-    "revision": "lineage-21",
-    "remote": "github"
-  },
-  {
     "repository": "LineageOS/android_hardware_mediatek",
     "target_path": "hardware/mediatek",
     "revision": "lineage-20",
