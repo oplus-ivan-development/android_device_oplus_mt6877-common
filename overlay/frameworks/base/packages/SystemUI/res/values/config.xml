@@ -88,4 +88,12 @@
          before the screen has had chance to switch out of HBM mode -->
      <integer name="config_udfpsDimmingDisableDelay">35</integer>
 
+         <!-- Whether show refresh rate QS tile -->
+    <bool name="config_showRefreshRateQsTile">false</bool>
+
+    <!-- Update battery info every second when device is charging -->
+    <bool name="config_alternateFastchargeInfoUpdate">false</bool>
+
+    <!-- Preferred max refresh rate at AOD & Ambient Display, if supported by the display. -->
+    <integer name="config_aodMaxRefreshRate">-1</integer>
 </resources>
