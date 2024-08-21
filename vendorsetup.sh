@@ -12,7 +12,7 @@ if [ -n "${CLEAN_DT_REPOS}" ]; then
 fi
 echo start cloning repos
 VT=vendor/oplus/ivan/ivan-vendor.mk
-if ! [ -a $VT ]; then git clone https://gitlab.com/notganesh/vendor_oneplus_ivan.git -b lineage-20 vendor/oplus/ivan
+if ! [ -a $VT ]; then git clone https://github.com/notganesh/vendor_oneplus_ivan.git -b lineage-20 vendor/oplus/ivan
 fi
 KT=kernel/oneplus/ivan/Makefile
 if ! [ -a $KT ]; then git clone https://github.com/Notganesh/kernel_oneplus_ivan.git -b main kernel/oneplus/ivan

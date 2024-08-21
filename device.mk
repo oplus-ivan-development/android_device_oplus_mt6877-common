@@ -97,6 +97,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcamera_metadata_shim
 
+# Doze
+PRODUCT_PACKAGES += \
+    OplusDoze
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4-service.clearkey
