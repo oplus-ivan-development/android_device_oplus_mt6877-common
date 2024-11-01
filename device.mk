@@ -259,18 +259,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml
 
-# Overlays
-PRODUCT_ENFORCE_RRO_TARGETS := *
-
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-derp
-
-PRODUCT_PACKAGES += \
-    CarrierConfigOverlay \
-    TetheringConfigOverlay \
-    WifiOverlay
-
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0.vendor \
@@ -428,6 +416,19 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
     hardware/oplus
+
+# Overlays
+PRODUCT_PACKAGES += \
+    OPlusFrameworksResTarget \
+    OPlusSettingsProviderResTarget \
+    OPlusSettingsResTarget \
+    OPlusSystemUIResTarget \
+    OPlusTelephonyResTarget \
+    OPlusTetheringConfigResTarget \
+    OPlusWifiResTarget
+
+PRODUCT_PACKAGES += \
+    OPlusNfcResTarget
 
 # Thermal
 PRODUCT_PACKAGES += \
