@@ -429,6 +429,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     OPlusNfcResTarget
+    
+PRODUCT_PACKAGES += \
+    ApertureResTarget
 
 # Thermal
 PRODUCT_PACKAGES += \
