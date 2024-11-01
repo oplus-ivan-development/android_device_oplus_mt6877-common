@@ -170,6 +170,8 @@ PRODUCT_BOOT_JARS += \
     mediatek-framework \
     mediatek-ims-base \
     mediatek-ims-common \
+    mediatek-ims-extension-plugin \
+    mediatek-ims-legacy \
     mediatek-telecom-common \
     mediatek-telephony-base \
     mediatek-telephony-common \
@@ -372,7 +374,6 @@ PRODUCT_PACKAGES += \
     init.connectivity.rc \
     init_connectivity.rc \
     init.modem.rc \
-    init.oplus.rc \
     init.mt6877.rc \
     init.mt6877.usb.rc \
     init.project.rc \

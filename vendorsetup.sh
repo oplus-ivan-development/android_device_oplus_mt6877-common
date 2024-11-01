@@ -1,11 +1,10 @@
-
 #!/bin/bash
 
 # kernel
 git clone https://github.com/notganesh/Kernel_oneplus_ivan.git -b main kernel/oneplus/ivan
 
 # Vendor
-git clone https://github.com/notganesh/vendor_oplus_ivan.git vendor/oplus/ivan
+git clone https://github.com/notganesh/vendor_oneplus_ivan.git vendor/oplus/ivan
 
 # Hardware
 git clone -b lineage-20 https://github.com/LineageOS/android_hardware_mediatek.git hardware/mediatek
