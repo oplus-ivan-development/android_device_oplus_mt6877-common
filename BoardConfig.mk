@@ -156,11 +156,6 @@ BOARD_MAIN_PARTITION_LIST := system system_ext vendor product odm
 BOARD_SUPER_PARTITION_SIZE := 10200547328
 BOARD_SUPER_PARTITION_GROUPS := main
 
-# Properties
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/props/vendor.prop
-TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/props/product.prop
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/props/system.prop
-
 # Recovery
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
