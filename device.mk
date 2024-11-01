@@ -199,7 +199,7 @@ PRODUCT_PACKAGES += \
    libsoft_attestation_cert.vendor:64 \
    libkeystore-wifi-hidl \
    libkeystore-engine-wifi-hidl
-   
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.ivan
@@ -440,14 +440,10 @@ PRODUCT_PACKAGES += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.5.vendor \
-    android.hardware.wifi.hostapd@1.3.vendor \
-    android.hardware.wifi.supplicant@1.4.vendor \
-    android.hardware.tetheroffload.config@1.0.vendor \
-    android.hardware.tetheroffload.control@1.1.vendor
-
-PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service-lazy.ivan
+    wpa_supplicant \
+    hostapd \
+    libwifi-hal-wrapper \
+    android.hardware.wifi-service
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
