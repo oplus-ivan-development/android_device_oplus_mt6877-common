@@ -199,18 +199,10 @@ PRODUCT_PACKAGES += \
    libsoft_attestation_cert.vendor:64 \
    libkeystore-wifi-hidl \
    libkeystore-engine-wifi-hidl
-
-# Keylayout
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/keylayout/,$(TARGET_COPY_OUT_VENDOR)/usr/keylayout)
-
+   
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.ivan
-
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.1-service-ivan
 
 # Media
 PRODUCT_PACKAGES += \
@@ -270,9 +262,6 @@ PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
     TetheringConfigOverlay \
     WifiOverlay
-
-# OnePlusParts
-$(call inherit-product, packages/apps/OnePlusParts/parts.mk)
 
 # USB
 PRODUCT_PACKAGES += \
@@ -345,10 +334,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-
-# PowerOffAlarm
-PRODUCT_PACKAGES += \
-    PowerOffAlarm
 
 # Public libraries
 PRODUCT_COPY_FILES += \
@@ -442,10 +427,6 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0.vendor \
     android.hardware.thermal@1.0-impl
-
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.oplus
 
 # Vibrator
 PRODUCT_PACKAGES += \

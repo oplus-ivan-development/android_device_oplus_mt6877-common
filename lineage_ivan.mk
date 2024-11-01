@@ -22,14 +22,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 # Inherit from ivan device
 $(call inherit-product, device/oneplus/ivan/device.mk)
 
-# Inherit some common DerpFest stuff.
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+# Inherit some common LineageOS stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := derp_ivan
+PRODUCT_NAME := lineage_ivan
 PRODUCT_DEVICE := ivan
 PRODUCT_BRAND := oneplus
 PRODUCT_MODEL := OnePlus Nord CE 2 5G
