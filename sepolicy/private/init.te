@@ -1,0 +1,2 @@
+# libinit
+allow init proc_oplus_operator:file r_file_perms;

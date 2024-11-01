@@ -1,0 +1,2 @@
+# Proc
+genfscon proc /oplusVersion/operatorName                                   u:object_r:proc_oplus_operator:s0

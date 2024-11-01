@@ -1,2 +1,1 @@
-# System Suspend
-type vendor_sysfs_usb_supply, fs_type, sysfs_type;
+type proc_oplus_operator, fs_type, proc_type;
