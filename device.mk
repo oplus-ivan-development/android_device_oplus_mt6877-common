@@ -431,7 +431,9 @@ PRODUCT_PACKAGES += \
     OPlusNfcResTarget
     
 PRODUCT_PACKAGES += \
-    ApertureResTarget
+    ApertureResTarget \
+    LineageSDKResTarget \
+    LineageSettingsProviderResTarget
 
 # Thermal
 PRODUCT_PACKAGES += \
