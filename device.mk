@@ -18,9 +18,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
-# Vendor Log Tag
-include $(DEVICE_PATH)/configs/props/logtag.mk
-
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
@@ -97,9 +94,6 @@ PRODUCT_PACKAGES += \
     libcamera_metadata_shim
 
 # DRM
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4-service.clearkey
-
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0.vendor \
     android.hardware.drm@1.1.vendor \
@@ -309,8 +303,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml \
-    $(DEVICE_PATH)/configs/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml
+    $(DEVICE_PATH)/configs/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
 
 # Power
 PRODUCT_PACKAGES += \
@@ -429,16 +422,13 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     OPlusNfcResTarget
-    
+
 PRODUCT_PACKAGES += \
     ApertureResTarget \
     LineageSDKResTarget \
     LineageSettingsProviderResTarget
 
 # Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.mediatek
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
 
