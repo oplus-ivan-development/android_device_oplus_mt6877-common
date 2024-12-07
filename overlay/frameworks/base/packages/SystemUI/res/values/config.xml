@@ -36,4 +36,7 @@
     <!-- Udfps animation size-->
     <dimen name="udfps_animation_size">205dp</dimen>
 
+    <!-- Whether to disable Smart Pixels on UDFPS -->
+    <bool name="config_disableSmartPixelsOnUDFPS">false</bool>
+
 </resources>
