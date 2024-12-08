@@ -7,7 +7,7 @@ git clone https://github.com/Notganesh/kernel_oneplus_ivan.git -b vooc kernel/op
 git clone https://github.com/oplus-ivan-development/android_device_oplus_ivan.git device/oplus/ivan
 
 # Vendor Tree
-git clone https://gitlab.com/Ko_Hi/vendor_ivan.git vendor/oplus/ivan
+git clone https://github.com/oplus-ivan-development/android_vendor_oplus_ivan.git vendor/oplus/ivan
 
 # Hardware
 git clone -b lineage-20 https://github.com/LineageOS/android_hardware_oplus.git hardware/oplus
