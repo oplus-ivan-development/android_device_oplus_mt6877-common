@@ -10,17 +10,6 @@ vendor.camera.aux.packagelist=com.android.camera,org.lineageos.aperture,org.line
 # Brand
 Build.BRAND=MTK
 
-# CA 
-persist.sys.radio.force_lte_ca=true
-
-# Connectivity
-vendor.rild.libpath=mtk-ril.so
-vendor.rild.libargs=-d /dev/ttyC0
-wifi.interface=wlan0
-ro.mediatek.wlan.wsc=1
-ro.mediatek.wlan.p2p=1
-mediatek.wlan.ctia=0
-
 # Dalvik
 dalvik.vm.ps-min-first-save-ms=150000
 dalvik.vm.image-dex2oat-Xms=64m
@@ -32,15 +21,17 @@ dalvik.vm.usejitprofiles=true
 dalvik.vm.dexopt.secondary=true
 dalvik.vm.dexopt.thermal-cutoff=2
 dalvik.vm.appimageformat=lz4
-ro.dalvik.vm.native.bridge=0
+dalvik.vm.dex2oat-updatable-bcp-packages-file=/system/etc/updatable-bcp-packages.txt
 dalvik.vm.dex2oat-resolve-startup-strings=true
 dalvik.vm.dex2oat-max-image-block-size=524288
 dalvik.vm.minidebuginfo=true
 dalvik.vm.dex2oat-minidebuginfo=true
+dalvik.vm.madvise.vdexfile.size=104857600
+dalvik.vm.madvise.odexfile.size=104857600
+dalvik.vm.madvise.artfile.size=4294967295
 
 # Dexopt
-pm.dexopt.first-boot=quicken
-pm.dexopt.boot=verify
+pm.dexopt.first-boot=verify
 pm.dexopt.boot-after-ota=verify
 pm.dexopt.post-boot=extract
 pm.dexopt.install=speed-profile
@@ -65,24 +56,11 @@ debug.sf.early.app.duration=20000000
 debug.sf.earlyGl.sf.duration=27600000
 debug.sf.earlyGl.app.duration=20000000
 debug.sf.hwc.min.duration=23000000
-debug.sf.predict_hwc_composition_strategy=0
-debug.sf.enable_transaction_tracing=false
 
 # Media
 ro.vendor.mtk_flv_playback_support=1
 media.stagefright.thumbnail.prefer_hw_codecs=true
 vendor.mtk_thumbnail_optimization=true
-
-# IMS
-persist.dbg.volte_avail_ovr=1
-persist.dbg.vt_avail_ovr=1
-persist.dbg.wfc_avail_ovr=1
-
-# USB
-ro.sys.usb.mtp.whql.enable=0
-ro.sys.usb.storage.type=mtp
-ro.sys.usb.charging.only=yes
-ro.sys.usb.bicr=no
 
 # Storage
 persist.sys.fuse.passthrough.enable=true
@@ -101,16 +79,9 @@ ro.kernel.zio=38,108,105,16
 ro.config.per_app_memcg=false
 
 # Misc
-persist.vendor.pms_removable=1
-persist.vendor.vzw_device_type=0
-ro.vendor.mtk_gwsd_support=1
-persist.vendor.mdlog.flush_log_ratio=0
-ro.mediatek.version.branch=alps-mp-t0.mssi1.tc16sp-pr1
-ro.mediatek.version.release=alps-mp-t0.mp1.tc16sp-pr1-V1
-ro.mediatek.version.build.branch=
+ro.mediatek.version.branch=alps-mp-s0.mssi1.tc16sp-pr6
 ro.vendor.mtk_omacp_support=1
 ro.vendor.mtk_cta_set=1
-ro.vendor.qti.va_aosp.support=0
 debug.stagefright.c2inputsurface=-1
 debug.atrace.tags.enableflags=0
 persist.traced.enable=1
@@ -119,12 +90,9 @@ ro.vendor.mtk_gwsd_support=1
 persist.vendor.pms_removable=1
 persist.vendor.vzw_device_type=0
 ro.vendor.customer_logpath=/data
-persist.vendor.mdlog.flush_log_ratio=0
-vendor.mtk.hbt.enabled=0
-hbt.debug=off
+persist.vendor.mdlog.flush_log_ratio=72340194296137244
 ro.base_build=noah
 ro.vendor.mtk_gwsd_support=1
-ro.vendor.mtk_power_off_alarm_test=1
 
 # Perf
 ro.mtk_perf_simple_start_win=1
@@ -135,7 +103,6 @@ ro.mtk_perf_response_time=1
 vendor.rild.libpath=mtk-ril.so
 vendor.rild.libargs=-d /dev/ttyC0
 ro.vendor.mtk_telephony_add_on_policy=0
-ro.telephony.sim.count=2
 
 # Storage
 persist.sys.fuse.passthrough.enable=true
@@ -148,14 +115,15 @@ ro.sys.usb.charging.only=yes
 qemu.hw.mainkeys=0
 
 # WiFi
-wifi.direct.interface=p2p0
 wifi.interface=wlan0
+wifi.tethering.interface=ap0
+wifi.direct.interface=p2p0
 ro.mediatek.wlan.wsc=1
 ro.mediatek.wlan.p2p=1
 mediatek.wlan.ctia=0
-wifi.tethering.interface=ap0
+ro.audio.usb.period_us=16000
+persist.sys.usb.config=adb
 persist.vendor.wfc.sys_wfc_support=1
 
 # Zygote
 ro.zygote.preload.enable=0
-zygote.critical_window.minute=10

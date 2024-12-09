@@ -392,15 +392,10 @@ PRODUCT_PACKAGES += \
     fstab.mt6877 \
     init.connectivity.common.rc \
     init.connectivity.rc \
-    init_connectivity.rc \
     init.modem.rc \
     init.mt6877.rc \
     init.mt6877.usb.rc \
-    init.project.rc \
-    init.sensor_2_0.rc \
-    init.target.rc \
-    ueventd.mtk.rc \
-    ueventd.oplus.rc \
+    init.sensor_2_0.rc
 
 # Fastboot
 PRODUCT_PACKAGES += \

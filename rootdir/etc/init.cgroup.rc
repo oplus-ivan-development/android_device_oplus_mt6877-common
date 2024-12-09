@@ -1,4 +1,6 @@
+
 on post-fs
+
     # boot perf. tune
     write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "0 100"
     write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "1 100"
@@ -6,7 +8,8 @@ on post-fs
     write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "3 100"
 
 on init
-    # Create energy-aware scheduler tuning nodes
+
+ # Create energy-aware scheduler tuning nodes
     mkdir /dev/stune/foreground
     mkdir /dev/stune/background
     mkdir /dev/stune/top-app
@@ -46,6 +49,7 @@ on init
     chmod 0666 /dev/stune/io/tasks
 
 on property:sys.boot_completed=1
+
     write /sys/devices/system/cpu/eas/enable 2
     write /proc/cpufreq/cpufreq_sched_disable 0
 
