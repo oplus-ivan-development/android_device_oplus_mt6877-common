@@ -399,6 +399,7 @@ PRODUCT_PACKAGES += \
     init.sensor_2_0.rc \
     init_conninfra.rc \
     fstab.mt6877 \
+    fstab.mt6877.ramdisk \
     ueventd.oplus.rc \
     ueventd.mtk.rc
 
