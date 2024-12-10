@@ -399,7 +399,8 @@ PRODUCT_PACKAGES += \
     init.sensor_2_0.rc \
     init_conninfra.rc \
     fstab.mt6877 \
-    ueventd.oplus.rc
+    ueventd.oplus.rc \
+    ueventd.mtk.rc
 
 # Fastboot
 PRODUCT_PACKAGES += \
