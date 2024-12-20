@@ -466,14 +466,24 @@ PRODUCT_PACKAGES += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.5.vendor \
-    android.hardware.wifi.hostapd@1.3.vendor \
-    android.hardware.wifi.supplicant@1.4.vendor \
-    android.hardware.tetheroffload.config@1.0.vendor \
-    android.hardware.tetheroffload.control@1.1.vendor
+    android.hardware.tetheroffload.config@1.0.vendor:64 \
+    android.hardware.tetheroffload.control@1.0.vendor:64 \
+    android.hardware.tetheroffload.control@1.1.vendor:64 \
+    android.system.keystore2-V1-ndk.vendor \
+    android.hardware.wifi@1.0.vendor:64 \
+    android.hardware.wifi@1.1.vendor:64\
+    android.hardware.wifi@1.2.vendor:64 \
+    android.hardware.wifi@1.3.vendor:64 \
+    android.hardware.wifi@1.4.vendor:64 \
+    android.hardware.wifi@1.5.vendor:64 \
+    wpa_supplicant \
+    hostapd \
+    hostapd_cli \
+    libwifi-hal-mt66xx \
+    libwifi-system-iface.vendor
 
-PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service-lazy.mt6877
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/hidl/vendor_hals.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/vendor_hals/vendor_hals.xml
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
