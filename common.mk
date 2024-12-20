@@ -86,30 +86,21 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcamera_metadata_shim
 
-# Dex/ART optimization
-PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
-PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
-PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
-USE_DEX2OAT_DEBUG := false
-DONT_DEXPREOPT_PREBUILTS := true
-# Enable whole-program R8 Java optimizations for SystemUI and system_server
-SYSTEM_OPTIMIZE_JAVA := true
-SYSTEMUI_OPTIMIZE_JAVA := true
-
 # Doze
 PRODUCT_PACKAGES += \
     OplusDoze
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4-service.clearkey
-
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0.vendor \
-    android.hardware.drm@1.1.vendor \
-    android.hardware.drm@1.2.vendor \
-    android.hardware.drm@1.3.vendor \
-    android.hardware.drm@1.4.vendor
+    android.hardware.drm-service.clearkey \
+    android.hardware.drm@1.0.vendor:64 \
+    android.hardware.drm@1.1.vendor:64 \
+    android.hardware.drm@1.2.vendor:64 \
+    android.hardware.drm@1.3.vendor:64 \
+    android.hardware.drm@1.4.vendor:64 \
+    libmockdrmcryptoplugin \
+    libdrm.vendor \
+    libdrm
 
 # Display
 PRODUCT_PACKAGES += \
