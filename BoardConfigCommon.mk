@@ -73,7 +73,6 @@ BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/vintf/manifest.xml
 DEVICE_MATRIX_FILE += $(COMMON_PATH)/configs/vintf/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(COMMON_PATH)/configs/vintf/framework_compatibility_matrix.xml
-ODM_MANIFEST_FILES := $(COMMON_PATH)/configs/vintf/manifest_odm.xml
 
 # Display
 TARGET_SCREEN_DENSITY := 480
